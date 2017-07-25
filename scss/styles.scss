@@ -1,0 +1,87 @@
+@import "variables";
+@import "botones";
+
+body {font-family: $tipo-textos;}
+
+.logo
+{
+font-family: $tipo-textos !important;
+font-weight: 600;
+letter-spacing: 8px;
+font-size: 30px;
+text-align: center;
+padding: 30px 0px 30px 30px;
+line-height: 2.4rem;
+}
+
+.logo span {
+  font-size: 1rem;
+  display: block;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 300;
+}
+
+header .menu-superior {
+  background-color: $gris-oscuro;
+  border: none;
+  font-family: $tipo-textos;
+  letter-spacing: 1px;
+}
+
+h2.titiulo-caption {
+  font-family: $tipo-script;
+  font-size: 5rem;
+}
+
+.row-categorias {
+  padding: 8rem 0rem;
+  background-color: $gris-claro;
+}
+
+.box-categorias {
+  padding: 3rem;
+  border-radius: 0px;
+  border: 0px;
+  border-top: 8px solid $violeta;
+}
+
+.box-categorias .titulos{
+  text-align: center;
+}
+
+
+
+.titulos {
+  color: $violeta;
+  font-size: 2.2rem;
+  letter-spacing: 5px;
+}
+
+.modal-contacto {
+  @extend .box-categorias;
+  text-align: left;
+}
+
+footer {
+  background-color: $gris-oscuro;
+  padding: 3rem;
+  color: $gris-claro;
+}
+
+.copyright {
+  text-align: right;
+  font-size: 1.1rem;
+}
+
+.rrss {
+  text-align: left;
+}
+
+footer a {margin-right: 10px;}
+
+footer {
+  .fa-facebook-square {color: $color-facebook;}
+  .fa-twitter-square {color: $color-twitter;}
+  .fa-youtube-square {color: $color-youtube;}
+}
