@@ -1,27 +1,12 @@
-
-
-.menu-derecha // practica de anidamiento en sass
-{  .boton_principal {
-      padding: 30px !important;
-      border-bottom: 8px solid $violeta;
-      transition: background 1s ease, border 1s ease;
-  }
-  .boton_principal:hover, .boton_principal:focus {
-    background-color: $gris-medio !important;
-    border-bottom-color: $violeta-hover !important;
-    outline: none;
-  }
-}
-
-
 .botones {
-  background-color: $violeta;
+  background-color: transparent;
+  border: 2px solid white;
   color: white;
-  border: 0px;
+  transition: background 1s ease, color 1s ease;
 }
 
 .botones:hover {
-  background-color: $gris-oscuro;
-  color: white;
-  border: 0px;
+  background-color: white;
+  border: 2px solid white;
+  color: #5d5d5d;
 }

@@ -1,87 +1,98 @@
 @import "variables";
 @import "botones";
 
-body {font-family: $tipo-textos;}
 
-.logo
-{
-font-family: $tipo-textos !important;
-font-weight: 600;
-letter-spacing: 8px;
-font-size: 30px;
-text-align: center;
-padding: 30px 0px 30px 30px;
-line-height: 2.4rem;
+* {box-sizing: border-box; margin: 0; padding: 0;}
+html {font-size: 16px;}
+body {font-family: $tipo-textos; color: #5d5d5d;}
+
+.nav-top {
+  background-color: $aguamarina;
+  border-top: 8px solid $lila;
+  border-top-left-radius: 0px 0px;
+  border-top-right-radius: 0px 0px;
+  border-bottom-right-radius: 100% 40%;
+  border-bottom-left-radius: 100% 40%;
+
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+
 }
 
-.logo span {
-  font-size: 1rem;
-  display: block;
+
+.menuPrincipal ul {
+  list-style-type:none;
   text-align: center;
-  letter-spacing: 3px;
-  font-weight: 300;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+
 }
 
-header .menu-superior {
-  background-color: $gris-oscuro;
-  border: none;
-  font-family: $tipo-textos;
+.menuPrincipal ul li a {
+  text-decoration: none;
   letter-spacing: 1px;
+  padding: 1.5rem 2rem;
+  font-size: 0.8rem;
+  color:white;
+  margin:0px 1rem;
+  color: white;
+  background-color:$aguamarina;
+  font-weight: 300;
+  transition: background 1s ease, color 1s ease;
+  display: block;
 }
 
-h2.titiulo-caption {
-  font-family: $tipo-script;
-  font-size: 5rem;
-}
-
-.row-categorias {
-  padding: 8rem 0rem;
-  background-color: $gris-claro;
-}
-
-.box-categorias {
-  padding: 3rem;
-  border-radius: 0px;
-  border: 0px;
-  border-top: 8px solid $violeta;
-}
-
-.box-categorias .titulos{
-  text-align: center;
+.menuPrincipal ul li a:hover {
+  background-color: $aguamarina-claro;
 }
 
 
 
-.titulos {
-  color: $violeta;
-  font-size: 2.2rem;
-  letter-spacing: 5px;
+.categoria {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+
+      .info {
+        padding: 2rem;
+        flex-grow: 2;
+
+            h2 {
+                font-family: $tipo-script-imprenta;
+                font-size: 4rem;
+
+                    span { display: block;
+                           font-family: $tipo-textos;
+                           font-size: 1.5rem;
+                           line-height: 5px;
+                    }
+            }
+
+            p {
+              font-size: 1rem;
+              line-height: 1.5rem;
+              padding: 1rem 0;
+              width: 80%;
+            }
+      }
+
+      .imagenes {
+        padding: 2rem;
+        flex-grow: 1;
+        background-color: red;
+
+          img {max-width: 400px; background-color: blue;}
+      }
 }
 
-.modal-contacto {
-  @extend .box-categorias;
-  text-align: left;
-}
 
-footer {
-  background-color: $gris-oscuro;
-  padding: 3rem;
-  color: $gris-claro;
-}
 
-.copyright {
-  text-align: right;
-  font-size: 1.1rem;
-}
 
-.rrss {
-  text-align: left;
-}
-
-footer a {margin-right: 10px;}
-
-footer {
-  .fa-facebook-square {color: $color-facebook;}
-  .fa-twitter-square {color: $color-twitter;}
-  .fa-youtube-square {color: $color-youtube;}
+.alimentacion {
+  background-color: $limon;
 }
