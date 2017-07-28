@@ -1,12 +1,53 @@
-.botones {
-  background-color: transparent;
-  border: 2px solid white;
-  color: white;
-  transition: background 1s ease, color 1s ease;
-}
 
-.botones:hover {
+.boton-blanco {
+  transition: background 0.5s ease, color 0.5s ease;
   background-color: white;
   border: 2px solid white;
   color: #5d5d5d;
+}
+
+.boton-blanco:hover {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.boton-limon {
+  transition: background 0.5s ease, color 0.5s ease;
+  background-color: $limon;
+  border: 2px solid $limon;
+  color: #5d5d5d;
+}
+
+.boton-limon:hover {
+  background-color: transparent;
+  border: 2px solid $limon;
+  color: $limon;
+
+}
+
+.boton-lila {
+  transition: background 0.5s ease, color 0.5s ease;
+  background-color: $lila;
+  border: 2px solid $lila;
+  color: #5d5d5d;
+}
+
+.boton-lila:hover {
+    background-color: transparent;
+    border: 2px solid $lila;
+    color: $lila;
+}
+
+.boton-aguamarina {
+  transition: background 0.5s ease, color 0.5s ease;
+  background-color: $aguamarina;
+  border: 2px solid $aguamarina;
+  color: #5d5d5d;
+}
+
+.boton-aguamarina:hover {
+    background-color: transparent;
+    border: 2px solid $aguamarina;
+    color: $aguamarina;
 }

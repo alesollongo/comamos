@@ -1,21 +1,63 @@
-.botones {
-  background-color: transparent;
-  border: 2px solid white;
-  color: white;
-  -webkit-transition: background 1s ease, color 1s ease;
-  -o-transition: background 1s ease, color 1s ease;
-  transition: background 1s ease, color 1s ease; }
-
-.botones:hover {
+.boton-blanco {
+  -webkit-transition: background 0.5s ease, color 0.5s ease;
+  -o-transition: background 0.5s ease, color 0.5s ease;
+  transition: background 0.5s ease, color 0.5s ease;
   background-color: white;
   border: 2px solid white;
   color: #5d5d5d; }
+
+.boton-blanco:hover {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white; }
+
+.boton-limon {
+  -webkit-transition: background 0.5s ease, color 0.5s ease;
+  -o-transition: background 0.5s ease, color 0.5s ease;
+  transition: background 0.5s ease, color 0.5s ease;
+  background-color: #e6e890;
+  border: 2px solid #e6e890;
+  color: #5d5d5d; }
+
+.boton-limon:hover {
+  background-color: transparent;
+  border: 2px solid #e6e890;
+  color: #e6e890; }
+
+.boton-lila {
+  -webkit-transition: background 0.5s ease, color 0.5s ease;
+  -o-transition: background 0.5s ease, color 0.5s ease;
+  transition: background 0.5s ease, color 0.5s ease;
+  background-color: #ca92c0;
+  border: 2px solid #ca92c0;
+  color: #5d5d5d; }
+
+.boton-lila:hover {
+  background-color: transparent;
+  border: 2px solid #ca92c0;
+  color: #ca92c0; }
+
+.boton-aguamarina {
+  -webkit-transition: background 0.5s ease, color 0.5s ease;
+  -o-transition: background 0.5s ease, color 0.5s ease;
+  transition: background 0.5s ease, color 0.5s ease;
+  background-color: #8ad1ce;
+  border: 2px solid #8ad1ce;
+  color: #5d5d5d; }
+
+.boton-aguamarina:hover {
+  background-color: transparent;
+  border: 2px solid #8ad1ce;
+  color: #8ad1ce; }
 
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0; }
+
+a {
+  text-decoration: none; }
 
 html {
   font-size: 16px; }
@@ -26,7 +68,8 @@ body {
 
 .nav-top {
   background-color: #8ad1ce;
-  border-top: 8px solid #ca92c0;
+  -webkit-box-shadow: inset 0 10px 0 0 #ca92c0;
+  box-shadow: inset 0 10px 0 0 #ca92c0;
   border-top-left-radius: 0px 0px;
   border-top-right-radius: 0px 0px;
   border-bottom-right-radius: 100% 40%;
@@ -51,32 +94,41 @@ body {
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center; }
 
-.menuPrincipal ul li a {
+.menuPrincipal ul li a:not(.logo) {
   text-decoration: none;
   letter-spacing: 1px;
-  padding: 1.5rem 2rem;
+  padding: 3rem 2rem 0.5rem;
   font-size: 0.8rem;
   color: white;
   margin: 0px 1rem;
   color: white;
   background-color: #8ad1ce;
   font-weight: 300;
-  -webkit-transition: background 1s ease, color 1s ease;
-  -o-transition: background 1s ease, color 1s ease;
-  transition: background 1s ease, color 1s ease;
-  display: block; }
+  -webkit-transition: -webkit-box-shadow 0.8s ease;
+  transition: -webkit-box-shadow 0.8s ease;
+  -o-transition: box-shadow 0.8s ease;
+  transition: box-shadow 0.8s ease;
+  transition: box-shadow 0.8s ease, -webkit-box-shadow 0.8s ease;
+  display: block;
+  -webkit-box-shadow: inset 0 10px 0 0 #ca92c0;
+  box-shadow: inset 0 10px 0 0 #ca92c0; }
 
-.menuPrincipal ul li a:hover {
-  background-color: #cce9e9; }
+.menuPrincipal ul li a:not(.logo):hover {
+  -webkit-box-shadow: inset 0 25px 0 0 #e6e890;
+  box-shadow: inset 0 25px 0 0 #e6e890; }
+
+.logo {
+  display: block;
+  padding: 1.6rem 1.6rem 1rem; }
 
 .categoria {
   display: -webkit-box;
@@ -97,7 +149,8 @@ body {
     flex-grow: 2; }
     .categoria .info h2 {
       font-family: "Shadows Into Light", cursive;
-      font-size: 4rem; }
+      font-size: 4rem;
+      text-align: left; }
       .categoria .info h2 span {
         display: block;
         font-family: "Questrial", sans-serif;
@@ -113,11 +166,97 @@ body {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
-    flex-grow: 1;
-    background-color: red; }
+    flex-grow: 1; }
     .categoria .imagenes img {
-      max-width: 400px;
-      background-color: blue; }
+      max-width: 400px; }
+
+.categoria-invert {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse; }
+  .categoria-invert .info {
+    padding: 2rem;
+    -webkit-box-flex: 2;
+    -webkit-flex-grow: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2;
+    text-align: right; }
+    .categoria-invert .info h2 {
+      font-family: "Shadows Into Light", cursive;
+      font-size: 4rem;
+      text-align: right; }
+      .categoria-invert .info h2 span {
+        display: block;
+        font-family: "Questrial", sans-serif;
+        font-size: 1.5rem;
+        line-height: 5px; }
+    .categoria-invert .info p {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      padding: 1rem 0;
+      width: 80%;
+      float: right; }
 
 .alimentacion {
+  background-color: #ca92c0;
+  color: white; }
+
+.movimiento {
   background-color: #e6e890; }
+
+.cocina {
+  background-color: #8ad1ce;
+  color: white; }
+
+h2 {
+  text-align: center;
+  padding-bottom: 2rem;
+  font-size: 2.3rem; }
+
+.lila {
+  color: #ca92c0; }
+
+.aguamarina {
+  color: #8ad1ce; }
+
+.opiniones {
+  background-color: #fbfcdb;
+  padding: 2rem 0rem; }
+
+.opinion {
+  padding: 2rem;
+  text-align: center;
+  border: none;
+  border-top: 10px solid #ca92c0;
+  border-radius: 0px; }
+  .opinion img {
+    display: block;
+    border-radius: 100%;
+    width: 80%; }
+  .opinion h3 {
+    color: #8ad1ce;
+    font-weight: bold; }
+  .opinion h4 {
+    color: #8ad1ce;
+    line-height: 0.5rem; }
+  .opinion p {
+    padding-top: 1rem; }
+
+.contacto {
+  background-color: #353434;
+  padding: 2rem 0rem; }
+
+label {
+  padding-top: 1.4rem; }
+
+.enviar {
+  text-align: center;
+  padding-top: 1rem; }
+
+footer {
+  background-color: #8ad1ce;
+  padding: 2rem 0rem; }
+  footer .copyright {
+    text-align: right; }
